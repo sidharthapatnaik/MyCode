@@ -1,0 +1,40 @@
+﻿@model WebApplication1.Models.EmpData
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmpDetails</title>
+    <script language="JavaScript" type="text/javascript" src="~/js/jquery-1.7.1.min.js"></script>
+    <script src="~/js/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+</head>
+<body>
+
+    <h4>EmpData</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form id="Form1" data-ajax="true" asp-action="EmpDetails" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="text" asp-for="EName" id="txtname" />
+                    <input type="text" asp-for="ESal" id="txtsalary" />
+                    @*<input type="submit" id="btnSubmit" value="Create" class="btn btn-primary" />*@
+                    <input type="button" id="btnSubmit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</body>
+</html>
+@*<script src="~/js/file.js"></script>*@
+<script language="JavaScript" type="text/javascript" src="~/js/Data.js"></script>
